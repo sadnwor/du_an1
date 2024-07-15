@@ -13,13 +13,13 @@ public class MonAn {
     private String maMonAn;
     private String maLoaiMonAn;
     private String tenMonAn;
-    private String trangThaiMonAn;
+    private boolean trangThaiMonAn;
     private String ghiChuMonAn;
 
     public MonAn() {
     }
 
-    public MonAn(String maMonAn, String maLoaiMonAn, String tenMonAn, String trangThaiMonAn, String ghiChuMonAn) {
+    public MonAn(String maMonAn, String maLoaiMonAn, String tenMonAn, boolean trangThaiMonAn, String ghiChuMonAn) {
         this.maMonAn = maMonAn;
         this.maLoaiMonAn = maLoaiMonAn;
         this.tenMonAn = tenMonAn;
@@ -51,11 +51,11 @@ public class MonAn {
         this.tenMonAn = tenMonAn;
     }
 
-    public String getTrangThaiMonAn() {
+    public boolean getTrangThaiMonAn() {
         return trangThaiMonAn;
     }
 
-    public void setTrangThaiMonAn(String trangThaiMonAn) {
+    public void setTrangThaiMonAn(boolean trangThaiMonAn) {
         this.trangThaiMonAn = trangThaiMonAn;
     }
 
