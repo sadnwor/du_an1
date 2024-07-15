@@ -16,18 +16,15 @@ import java.util.ArrayList;
  * @author anhha
  */
 public class RepositoryMonAn {
+
     public ArrayList<MonAn> getAll() {
         String sql = """
-                     SELECT 
-                           MonAn.MaMonAn,
-                           MonAn.TenMonAn,
-                           LoaiMonAn.TenLoaiMonAn,
-                           MonAn.TrangThai,
-                           MonAn.GhiChu
-                       FROM 
-                           MonAn
-                       JOIN 
-                           LoaiMonAn ON MonAn.MaLoaiMonAn = LoaiMonAn.MaLoaiMonAn;
+                     SELECT [MaMonAn]
+                           ,[MaLoaiMonAn]
+                           ,[TenMonAn]
+                           ,[GhiChu]
+                           ,[TrangThai]
+                       FROM [dbo].[MonAn]
                      """;
         ArrayList<MonAn> list = new ArrayList<>();
         try (Connection con = DBConnect.getConnection(); PreparedStatement ps = con.prepareStatement(sql)) {
@@ -35,9 +32,11 @@ public class RepositoryMonAn {
             while (rs.next()) {
                 MonAn ma = new MonAn();
                 ma.setMaMonAn(rs.getString(1));
-                ma.setTenMonAn(rs.getString(2));
-                ma.setMkMonAn(rs.getString(3));
-                list.add(tk);
+                ma.setMaLoaiMonAn(rs.getString(2));
+                ma.setTenMonAn(rs.getString(3));
+                ma.setGhiChuMonAn(rs.getString(4));
+                ma.setTrangThaiMonAn(rs.getString(5));
+                list.add(ma);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -45,20 +44,24 @@ public class RepositoryMonAn {
         return list;
     }
 
-    public boolean them(MonAn tk) {
+    public boolean them(MonAn ma) {
         String sql = """
                      INSERT INTO [dbo].[MonAn]
-                                  ([MaMonAn]
-                                  ,[TenMonAn]
-                                  ,[MatKhau])
-                            VALUES
-                                  (?,?,?)
+                                ([MaMonAn]
+                                ,[MaLoaiMonAn]
+                                ,[TenMonAn]
+                                ,[GhiChu]
+                                ,[TrangThai])
+                          VALUES
+                                (?,?,?,?,?)
                      """;
         int check = 0;
         try (Connection con = DBConnect.getConnection(); PreparedStatement ps = con.prepareStatement(sql)) {
-            ps.setObject(1, tk.getMaMonAn());
-            ps.setObject(1, tk.getTenMonAn());
-            ps.setObject(1, tk.getMkMonAn());
+            ps.setObject(1, ma.getMaMonAn());
+            ps.setObject(2, ma.getMaLoaiMonAn());
+            ps.setObject(3, ma.getTenMonAn());
+            ps.setObject(4, ma.getGhiChuMonAn());
+            ps.setObject(5, ma.getTrangThaiMonAn());
             check = ps.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
@@ -69,28 +72,36 @@ public class RepositoryMonAn {
     public boolean sua(String ma, MonAn newMonAn) {
         String sql = """
                     UPDATE [dbo].[MonAn]
-                        SET [MaMonAn] = ?
-                           ,[TenMonAn] = ?
-                           ,[MatKhau] = ?
-                      WHERE MaMonAn = ?
+                       SET [MaMonAn] = ?
+                          ,[MaLoaiMonAn] = ?
+                          ,[TenMonAn] = ?
+                          ,[GhiChu] = ?
+                          ,[TrangThai] = ?
+                     FROM [dbo].[MonAn] ma
+                     JOIN [dbo].[LoaiMonAn] lma ON ma.MaLoaiMonAn = lma.MaLoaiMonAn
+                     WHERE ma.MaMonAn = ?
                      """;
         int check = 0;
         try (Connection con = DBConnect.getConnection(); PreparedStatement ps = con.prepareStatement(sql)) {
             ps.setObject(1, newMonAn.getMaMonAn());
-            ps.setObject(2, newMonAn.getTenMonAn());
-            ps.setObject(3, newMonAn.getMkMonAn());
-            ps.setObject(4, ma);
+            ps.setObject(2, newMonAn.getMaLoaiMonAn());
+            ps.setObject(3, newMonAn.getTenMonAn());
+            ps.setObject(4, newMonAn.getGhiChuMonAn());
+            ps.setObject(5, newMonAn.getTrangThaiMonAn());
+            ps.setObject(6, ma);
             check = ps.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
         }
         return check > 0;
     }
-    
+
     public boolean xoa(String ma) {
         String sql = """
-                 DELETE FROM [dbo].[MonAn]
-                       WHERE MaMonAn = ?
+                 DELETE ma
+                    FROM [dbo].[MonAn] ma
+                    JOIN [dbo].[LoaiMonAn] lma ON ma.MaLoaiMonAn = lma.MaLoaiMonAn
+                    WHERE ma.MaMonAn = ?
                  """;
         int check = 0;
         try (Connection con = DBConnect.getConnection(); PreparedStatement ps = con.prepareStatement(sql)) {
@@ -102,4 +113,3 @@ public class RepositoryMonAn {
         return check > 0;
     }
 }
-

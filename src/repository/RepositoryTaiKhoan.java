@@ -52,8 +52,8 @@ public class RepositoryTaiKhoan {
         int check = 0;
         try (Connection con = DBConnect.getConnection(); PreparedStatement ps = con.prepareStatement(sql)) {
             ps.setObject(1, tk.getMaTaiKhoan());
-            ps.setObject(1, tk.getTenTaiKhoan());
-            ps.setObject(1, tk.getMkTaiKhoan());
+            ps.setObject(2, tk.getTenTaiKhoan());
+            ps.setObject(3, tk.getMkTaiKhoan());
             check = ps.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();

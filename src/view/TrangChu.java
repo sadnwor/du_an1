@@ -285,7 +285,7 @@ public class TrangChu extends javax.swing.JFrame {
                 .addContainerGap(20, Short.MAX_VALUE))
         );
 
-        txtOpenMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/menu (1).png"))); // NOI18N
+        txtOpenMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/three-bars (1).png"))); // NOI18N
         txtOpenMenu.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 txtOpenMenuMouseClicked(evt);

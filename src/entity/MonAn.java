@@ -11,18 +11,18 @@ package entity;
 public class MonAn {
 
     private String maMonAn;
+    private String maLoaiMonAn;
     private String tenMonAn;
-    private String loaiMonAn;
     private String trangThaiMonAn;
     private String ghiChuMonAn;
 
     public MonAn() {
     }
 
-    public MonAn(String maMonAn, String tenMonAn, String loaiMonAn, String trangThaiMonAn, String ghiChuMonAn) {
+    public MonAn(String maMonAn, String maLoaiMonAn, String tenMonAn, String trangThaiMonAn, String ghiChuMonAn) {
         this.maMonAn = maMonAn;
+        this.maLoaiMonAn = maLoaiMonAn;
         this.tenMonAn = tenMonAn;
-        this.loaiMonAn = loaiMonAn;
         this.trangThaiMonAn = trangThaiMonAn;
         this.ghiChuMonAn = ghiChuMonAn;
     }
@@ -35,20 +35,20 @@ public class MonAn {
         this.maMonAn = maMonAn;
     }
 
+    public String getMaLoaiMonAn() {
+        return maLoaiMonAn;
+    }
+
+    public void setMaLoaiMonAn(String maLoaiMonAn) {
+        this.maLoaiMonAn = maLoaiMonAn;
+    }
+
     public String getTenMonAn() {
         return tenMonAn;
     }
 
     public void setTenMonAn(String tenMonAn) {
         this.tenMonAn = tenMonAn;
-    }
-
-    public String getLoaiMonAn() {
-        return loaiMonAn;
-    }
-
-    public void setLoaiMonAn(String loaiMonAn) {
-        this.loaiMonAn = loaiMonAn;
     }
 
     public String getTrangThaiMonAn() {
