@@ -35,7 +35,7 @@ public class RepositoryMonAn {
                 ma.setMaLoaiMonAn(rs.getString(2));
                 ma.setTenMonAn(rs.getString(3));
                 ma.setGhiChuMonAn(rs.getString(4));
-                ma.i(rs.getString(5));
+                ma.setTrangThaiMonAn(rs.getBoolean(5));
                 list.add(ma);
             }
         } catch (Exception e) {
