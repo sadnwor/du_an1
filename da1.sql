@@ -1,16 +1,16 @@
-create database QLNhaHang
+create database QLNhaHang;
 go
 use QLNhaHang
 go
 create table LoaiMonAn (
-	MaLoaiMonAn nvarchar(5) not null,
+	MaLoaiMonAn nvarchar(5),
 	TenLoaiMonAn nvarchar(50),
 	GhiChu nvarchar(max),
 	primary key (MaLoaiMonAn)
 )
 go
 create table MonAn (
-	MaMonAn nvarchar(5) not null,
+	MaMonAn nvarchar(5),
 	MaLoaiMonAn nvarchar(5),
 	TenMonAn nvarchar(255),
 	GhiChu nvarchar(max),
@@ -20,7 +20,7 @@ create table MonAn (
 )
 go
 create table Combo (
-	MaCombo nvarchar(5) not null,
+	MaCombo int IDENTITY(1,1),
 	TenCombo nvarchar(255),
 	GiaTien money,
 	TrangThai bit,
@@ -29,8 +29,8 @@ create table Combo (
 )
 go
 create table ComboChiTiet (
-	MaCombo nvarchar(5) not null,
-	MaMonAn nvarchar(5) not null,
+	MaCombo int,
+	MaMonAn nvarchar(5),
 	SoLuong int,
 	GhiChu nvarchar(max),
 	primary key (MaCombo, MaMonAn),
@@ -39,7 +39,7 @@ create table ComboChiTiet (
 )
 go
 create table KhuVuc (
-	MaKhuVuc nvarchar(5) not null,
+	MaKhuVuc nvarchar(5),
 	TenKhuVuc nvarchar(50),
 	ViTri nvarchar(20),
 	TrangThai bit,
@@ -48,14 +48,14 @@ create table KhuVuc (
 )
 go
 create table TaiKhoan (
-	MaTaiKhoan nvarchar(5) not null,
+	MaTaiKhoan nvarchar(5),
 	TenTaiKhoan nvarchar(255),
 	MatKhau nvarchar(50),
 	primary key (MaTaiKhoan)
 )
 go
 create table ChucVu (
-	MaChucVu nvarchar(5) not null,
+	MaChucVu nvarchar(5),
 	TenChucVu nvarchar(50),
 	ThoiGianNhamChuc date,
 	GhiChu nvarchar(max),
@@ -63,9 +63,9 @@ create table ChucVu (
 )
 go
 create table NhanVien (
-	MaNhanVien nvarchar(5) not null,
-	MaTaiKhoan nvarchar(5) not null,
-	MaChucVu nvarchar(5) not null,
+	MaNhanVien int IDENTITY(1,1),
+	MaTaiKhoan nvarchar(5),
+	MaChucVu nvarchar(5),
 	HoTenNhanVien nvarchar(255),
 	Email nvarchar(50),
 	DiaChi nvarchar(255),
@@ -80,7 +80,7 @@ create table NhanVien (
 )
 go
 create table UuDai (
-	MaUuDai nvarchar(5) not null,
+	MaUuDai nvarchar(5),
 	TenUuDai nvarchar(255),
 	ThoiGianBatDauUuDai date,	
 	ThoiGianKetThucUuDai date,
@@ -92,7 +92,7 @@ create table UuDai (
 )
 go
 create table Ban (
-	MaBan nvarchar(5) not null,
+	MaBan int IDENTITY(1,1),
 	MaKhuVuc nvarchar(5) not null,
 	TenBan nvarchar(50),
 	SoLuongGheNgoi int,
@@ -103,13 +103,13 @@ create table Ban (
 )
 go
 create table LoaiKhachHang (
-	MaLoaiKhachHang nvarchar(5) not null,
+	MaLoaiKhachHang nvarchar(5),
 	TenLoaiKhachHang nvarchar(50),
 	primary key (MaLoaiKhachHang)
 )
 go
 create table KhachHang (
-	MaKhachHang nvarchar(5) not null,
+	MaKhachHang int IDENTITY(1,1),
 	MaLoaiKhachHang nvarchar(5) not null,
 	HoTenKhachHang nvarchar(5) not null,
 	SDT nvarchar(15),
@@ -119,8 +119,8 @@ create table KhachHang (
 )
 go
 create table DanhGia (
-	MaDanhGia nvarchar(5) not null,
-	MaKhachHang nvarchar(5) not null,
+	MaDanhGia int IDENTITY(1,1),
+	MaKhachHang int,
 	NoiDungDanhGia nvarchar(max),
 	ThoiGian date,
 	LikeOrDisLike bit,
@@ -129,11 +129,11 @@ create table DanhGia (
 )
 go
 create table HoaDon (
-	MaHoaDon nvarchar(5) not null,
-	MaUuDai nvarchar(5) not null,
-	MaNhanVien nvarchar(5) not null,
-	MaKhachHang nvarchar(5) not null,
-	MaBan nvarchar(5) not null,
+	MaHoaDon int IDENTITY(1,1),
+	MaUuDai nvarchar(5),
+	MaNhanVien int,
+	MaKhachHang int,
+	MaBan nvarchar(5),
 	ThoiGian date,
 	TienGiam money,
 	TongTien money,
@@ -147,8 +147,8 @@ create table HoaDon (
 )
 go
 create table HoaDonChiTiet (
-	MaHoaDon nvarchar(5) not null,
-	MaComBo nvarchar(5) not null,
+	MaHoaDon int,
+	MaComBo int,
 	MaMonAn nvarchar(5),
 	SoLuong int,
 	ThanhTien money,
