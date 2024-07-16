@@ -4,7 +4,7 @@
  */
 package view;
 
-import entity.TaiKhoan;
+import entity.TaiKhoanModel;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -17,7 +17,7 @@ import repository.RepositoryTaiKhoan;
  */
 public class TrangChu extends javax.swing.JFrame {
     
-    private ArrayList<TaiKhoan> listTk = new ArrayList<>();
+    private ArrayList<TaiKhoanModel> listTk = new ArrayList<>();
     private DefaultTableModel dtm = new DefaultTableModel();
     private RepositoryTaiKhoan repoTk = new RepositoryTaiKhoan();
     
@@ -31,9 +31,9 @@ public class TrangChu extends javax.swing.JFrame {
         ShowTable(listTk);
     }
     
-    private void ShowTable(ArrayList<TaiKhoan> list) {
+    private void ShowTable(ArrayList<TaiKhoanModel> list) {
         dtm.setRowCount(0);
-        for (TaiKhoan tk : list) {
+        for (TaiKhoanModel tk : list) {
             dtm.addRow(new Object[]{
                 tk.getMaTaiKhoan(), tk.getTenTaiKhoan(), tk.getMkTaiKhoan()
             });

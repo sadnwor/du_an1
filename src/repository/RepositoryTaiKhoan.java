@@ -5,7 +5,7 @@
 package repository;
 
 import config.DBConnect;
-import entity.TaiKhoan;
+import entity.TaiKhoanModel;
 import java.util.ArrayList;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -17,18 +17,18 @@ import java.sql.ResultSet;
  */
 public class RepositoryTaiKhoan {
 
-    public ArrayList<TaiKhoan> getAll() {
+    public ArrayList<TaiKhoanModel> getAll() {
         String sql = """
                      SELECT [MaTaiKhoan]
                            ,[TenTaiKhoan]
                            ,[MatKhau]
                        FROM [dbo].[TaiKhoan]
                      """;
-        ArrayList<TaiKhoan> list = new ArrayList<>();
+        ArrayList<TaiKhoanModel> list = new ArrayList<>();
         try (Connection con = DBConnect.getConnection(); PreparedStatement ps = con.prepareStatement(sql)) {
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                TaiKhoan tk = new TaiKhoan();
+                TaiKhoanModel tk = new TaiKhoanModel();
                 tk.setMaTaiKhoan(rs.getString(1));
                 tk.setTenTaiKhoan(rs.getString(2));
                 tk.setMkTaiKhoan(rs.getString(3));
@@ -40,7 +40,7 @@ public class RepositoryTaiKhoan {
         return list;
     }
 
-    public boolean them(TaiKhoan tk) {
+    public boolean them(TaiKhoanModel tk) {
         String sql = """
                      INSERT INTO [dbo].[TaiKhoan]
                                   ([MaTaiKhoan]
@@ -61,7 +61,7 @@ public class RepositoryTaiKhoan {
         return check > 0;
     }
 
-    public boolean sua(String ma, TaiKhoan newTaiKhoan) {
+    public boolean sua(String ma, TaiKhoanModel newTaiKhoan) {
         String sql = """
                     UPDATE [dbo].[TaiKhoan]
                         SET [MaTaiKhoan] = ?

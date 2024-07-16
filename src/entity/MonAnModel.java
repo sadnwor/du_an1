@@ -8,7 +8,7 @@ package entity;
  *
  * @author anhha
  */
-public class MonAn {
+public class MonAnModel {
 
     private String maMonAn;
     private String maLoaiMonAn;
@@ -16,10 +16,10 @@ public class MonAn {
     private boolean trangThaiMonAn;
     private String ghiChuMonAn;
 
-    public MonAn() {
+    public MonAnModel() {
     }
 
-    public MonAn(String maMonAn, String maLoaiMonAn, String tenMonAn, boolean trangThaiMonAn, String ghiChuMonAn) {
+    public MonAnModel(String maMonAn, String maLoaiMonAn, String tenMonAn, boolean trangThaiMonAn, String ghiChuMonAn) {
         this.maMonAn = maMonAn;
         this.maLoaiMonAn = maLoaiMonAn;
         this.tenMonAn = tenMonAn;

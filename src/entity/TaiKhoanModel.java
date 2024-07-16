@@ -8,16 +8,16 @@ package entity;
  *
  * @author anhha
  */
-public class TaiKhoan {
+public class TaiKhoanModel {
 
     private String maTaiKhoan;
     private String tenTaiKhoan;
     private String mkTaiKhoan;
 
-    public TaiKhoan() {
+    public TaiKhoanModel() {
     }
 
-    public TaiKhoan(String maTaiKhoan, String tenTaiKhoan, String mkTaiKhoan) {
+    public TaiKhoanModel(String maTaiKhoan, String tenTaiKhoan, String mkTaiKhoan) {
         this.maTaiKhoan = maTaiKhoan;
         this.tenTaiKhoan = tenTaiKhoan;
         this.mkTaiKhoan = mkTaiKhoan;

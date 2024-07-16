@@ -5,7 +5,7 @@
 package repository;
 
 import config.DBConnect;
-import entity.MonAn;
+import entity.MonAnModel;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,7 +17,7 @@ import java.util.ArrayList;
  */
 public class RepositoryMonAn {
 
-    public ArrayList<MonAn> getAll() {
+    public ArrayList<MonAnModel> getAll() {
         String sql = """
                      SELECT [MaMonAn]
                            ,[MaLoaiMonAn]
@@ -26,11 +26,11 @@ public class RepositoryMonAn {
                            ,[TrangThai]
                        FROM [dbo].[MonAn]
                      """;
-        ArrayList<MonAn> list = new ArrayList<>();
+        ArrayList<MonAnModel> list = new ArrayList<>();
         try (Connection con = DBConnect.getConnection(); PreparedStatement ps = con.prepareStatement(sql)) {
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                MonAn ma = new MonAn();
+                MonAnModel ma = new MonAnModel();
                 ma.setMaMonAn(rs.getString(1));
                 ma.setMaLoaiMonAn(rs.getString(2));
                 ma.setTenMonAn(rs.getString(3));
@@ -44,7 +44,7 @@ public class RepositoryMonAn {
         return list;
     }
 
-    public boolean them(MonAn ma) {
+    public boolean them(MonAnModel ma) {
         String sql = """
                      INSERT INTO [dbo].[MonAn]
                                 ([MaMonAn]
@@ -69,7 +69,7 @@ public class RepositoryMonAn {
         return check > 0;
     }
 
-    public boolean sua(String ma, MonAn newMonAn) {
+    public boolean sua(String ma, MonAnModel newMonAn) {
         String sql = """
                     UPDATE [dbo].[MonAn]
                        SET [MaMonAn] = ?
