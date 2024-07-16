@@ -133,7 +133,7 @@ create table HoaDon (
 	MaUuDai nvarchar(5),
 	MaNhanVien int,
 	MaKhachHang int,
-	MaBan nvarchar(5),
+	MaBan int,
 	ThoiGian date,
 	TienGiam money,
 	TongTien money,
