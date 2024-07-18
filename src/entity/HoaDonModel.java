@@ -10,7 +10,7 @@ package entity;
  */
 public class HoaDonModel {
     private int maHoaDon;
-    private String maUuDai;
+    private int maUuDai;
     private int maNhanVien;
     private int maKhachHang;
     private int maBan;
@@ -23,7 +23,7 @@ public class HoaDonModel {
     public HoaDonModel() {
     }
 
-    public HoaDonModel(int maHoaDon, String maUuDai, int maNhanVien, int maKhachHang, int maBan, String thoiGian, double tienGiam, double tongTien, boolean trangThai, String ghiChu) {
+    public HoaDonModel(int maHoaDon, int maUuDai, int maNhanVien, int maKhachHang, int maBan, String thoiGian, double tienGiam, double tongTien, boolean trangThai, String ghiChu) {
         this.maHoaDon = maHoaDon;
         this.maUuDai = maUuDai;
         this.maNhanVien = maNhanVien;
@@ -44,11 +44,11 @@ public class HoaDonModel {
         this.maHoaDon = maHoaDon;
     }
 
-    public String getMaUuDai() {
+    public int getMaUuDai() {
         return maUuDai;
     }
 
-    public void setMaUuDai(String maUuDai) {
+    public void setMaUuDai(int maUuDai) {
         this.maUuDai = maUuDai;
     }
 

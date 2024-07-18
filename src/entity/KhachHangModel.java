@@ -10,7 +10,6 @@ package entity;
  */
 public class KhachHangModel {
     private int maKhachHang;
-    private String maLoaiKhachHang;
     private String hoTenKhachHang;
     private String SDT;
     private String ghiChu;
@@ -18,13 +17,14 @@ public class KhachHangModel {
     public KhachHangModel() {
     }
 
-    public KhachHangModel(int maKhachHang, String maLoaiKhachHang, String hoTenKhachHang, String SDT, String ghiChu) {
+    public KhachHangModel(int maKhachHang, String hoTenKhachHang, String SDT, String ghiChu) {
         this.maKhachHang = maKhachHang;
-        this.maLoaiKhachHang = maLoaiKhachHang;
         this.hoTenKhachHang = hoTenKhachHang;
         this.SDT = SDT;
         this.ghiChu = ghiChu;
     }
+
+ 
 
     public int getMaKhachHang() {
         return maKhachHang;
@@ -34,14 +34,7 @@ public class KhachHangModel {
         this.maKhachHang = maKhachHang;
     }
 
-    public String getMaLoaiKhachHang() {
-        return maLoaiKhachHang;
-    }
-
-    public void setMaLoaiKhachHang(String maLoaiKhachHang) {
-        this.maLoaiKhachHang = maLoaiKhachHang;
-    }
-
+  
     public String getHoTenKhachHang() {
         return hoTenKhachHang;
     }

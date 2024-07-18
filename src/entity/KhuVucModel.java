@@ -9,7 +9,7 @@ package entity;
  * @author admin
  */
 public class KhuVucModel {
-    private String maKhuVuc;
+    private int maKhuVuc;
     private String tenKhuVuc;
     private String viTri;
     private boolean trangThai;
@@ -18,7 +18,7 @@ public class KhuVucModel {
     public KhuVucModel() {
     }
 
-    public KhuVucModel(String maKhuVuc, String tenKhuVuc, String viTri, boolean trangThai, String thiChu) {
+    public KhuVucModel(int maKhuVuc, String tenKhuVuc, String viTri, boolean trangThai, String thiChu) {
         this.maKhuVuc = maKhuVuc;
         this.tenKhuVuc = tenKhuVuc;
         this.viTri = viTri;
@@ -26,11 +26,11 @@ public class KhuVucModel {
         this.thiChu = thiChu;
     }
 
-    public String getMaKhuVuc() {
+    public int  getMaKhuVuc() {
         return maKhuVuc;
     }
 
-    public void setMaKhuVuc(String maKhuVuc) {
+    public void setMaKhuVuc(int maKhuVuc) {
         this.maKhuVuc = maKhuVuc;
     }
 

@@ -10,8 +10,8 @@ package entity;
  */
 public class MonAnModel {
 
-    private String maMonAn;
-    private String maLoaiMonAn;
+    private int maMonAn;
+    private int maLoaiMonAn;
     private String tenMonAn;
     private boolean trangThaiMonAn;
     private String ghiChuMonAn;
@@ -19,7 +19,7 @@ public class MonAnModel {
     public MonAnModel() {
     }
 
-    public MonAnModel(String maMonAn, String maLoaiMonAn, String tenMonAn, boolean trangThaiMonAn, String ghiChuMonAn) {
+    public MonAnModel(int maMonAn, int maLoaiMonAn, String tenMonAn, boolean trangThaiMonAn, String ghiChuMonAn) {
         this.maMonAn = maMonAn;
         this.maLoaiMonAn = maLoaiMonAn;
         this.tenMonAn = tenMonAn;
@@ -27,19 +27,19 @@ public class MonAnModel {
         this.ghiChuMonAn = ghiChuMonAn;
     }
 
-    public String getMaMonAn() {
+    public int getMaMonAn() {
         return maMonAn;
     }
 
-    public void setMaMonAn(String maMonAn) {
+    public void setMaMonAn(int maMonAn) {
         this.maMonAn = maMonAn;
     }
 
-    public String getMaLoaiMonAn() {
+    public int getMaLoaiMonAn() {
         return maLoaiMonAn;
     }
 
-    public void setMaLoaiMonAn(String maLoaiMonAn) {
+    public void setMaLoaiMonAn(int maLoaiMonAn) {
         this.maLoaiMonAn = maLoaiMonAn;
     }
 

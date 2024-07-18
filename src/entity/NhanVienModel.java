@@ -10,8 +10,8 @@ package entity;
  */
 public class NhanVienModel {
     private int maNhanVien;
-    private String maTaiKhoan;
-    private String maChucVu;
+    private int maTaiKhoan;
+    private int maChucVu;
     private String hoTenNhanVien;
     private String email;
     private String diaChi;
@@ -24,7 +24,7 @@ public class NhanVienModel {
     public NhanVienModel() {
     }
 
-    public NhanVienModel(int maNhanVien, String maTaiKhoan, String maChucVu, String hoTenNhanVien, String email, String diaChi, boolean gioiTinh, String SDT, String ngaySinh, boolean trangThai, String ghiChu) {
+    public NhanVienModel(int maNhanVien, int maTaiKhoan, int maChucVu, String hoTenNhanVien, String email, String diaChi, boolean gioiTinh, String SDT, String ngaySinh, boolean trangThai, String ghiChu) {
         this.maNhanVien = maNhanVien;
         this.maTaiKhoan = maTaiKhoan;
         this.maChucVu = maChucVu;
@@ -46,19 +46,19 @@ public class NhanVienModel {
         this.maNhanVien = maNhanVien;
     }
 
-    public String getMaTaiKhoan() {
+    public int getMaTaiKhoan() {
         return maTaiKhoan;
     }
 
-    public void setMaTaiKhoan(String maTaiKhoan) {
+    public void setMaTaiKhoan(int maTaiKhoan) {
         this.maTaiKhoan = maTaiKhoan;
     }
 
-    public String getMaChucVu() {
+    public int getMaChucVu() {
         return maChucVu;
     }
 
-    public void setMaChucVu(String maChucVu) {
+    public void setMaChucVu(int maChucVu) {
         this.maChucVu = maChucVu;
     }
 

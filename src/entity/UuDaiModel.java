@@ -9,7 +9,7 @@ package entity;
  * @author admin
  */
 public class UuDaiModel {
-    private String maUuDai;
+    private int maUuDai;
     private String tenUuDai;
     private String thoiGianBatDauUuDai;
     private String thoiGianKetThucUuDai;
@@ -21,7 +21,7 @@ public class UuDaiModel {
     public UuDaiModel() {
     }
 
-    public UuDaiModel(String maUuDai, String tenUuDai, String thoiGianBatDauUuDai, String thoiGianKetThucUuDai, double phanTramUuDai, int soLuong, boolean trangThai, String ghiChu) {
+    public UuDaiModel(int maUuDai, String tenUuDai, String thoiGianBatDauUuDai, String thoiGianKetThucUuDai, double phanTramUuDai, int soLuong, boolean trangThai, String ghiChu) {
         this.maUuDai = maUuDai;
         this.tenUuDai = tenUuDai;
         this.thoiGianBatDauUuDai = thoiGianBatDauUuDai;
@@ -32,11 +32,11 @@ public class UuDaiModel {
         this.ghiChu = ghiChu;
     }
 
-    public String getMaUuDai() {
+    public int getMaUuDai() {
         return maUuDai;
     }
 
-    public void setMaUuDai(String maUuDai) {
+    public void setMaUuDai(int maUuDai) {
         this.maUuDai = maUuDai;
     }
 

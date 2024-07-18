@@ -9,7 +9,7 @@ package entity;
  * @author admin
  */
 public class ChucVuModel {
-    private String maChucVu;
+    private int maChucVu;
     private String tenChucVu;
     private String thoiGianNhamChuc;
     private String ghiChu;
@@ -17,18 +17,18 @@ public class ChucVuModel {
     public ChucVuModel() {
     }
 
-    public ChucVuModel(String maChucVu, String tenChucVu, String thoiGianNhamChuc, String ghiChu) {
+    public ChucVuModel(int maChucVu, String tenChucVu, String thoiGianNhamChuc, String ghiChu) {
         this.maChucVu = maChucVu;
         this.tenChucVu = tenChucVu;
         this.thoiGianNhamChuc = thoiGianNhamChuc;
         this.ghiChu = ghiChu;
     }
 
-    public String getMaChucVu() {
+    public int getMaChucVu() {
         return maChucVu;
     }
 
-    public void setMaChucVu(String maChucVu) {
+    public void setMaChucVu(int maChucVu) {
         this.maChucVu = maChucVu;
     }
 

@@ -10,24 +10,24 @@ package entity;
  */
 public class TaiKhoanModel {
 
-    private String maTaiKhoan;
+    private int maTaiKhoan;
     private String tenTaiKhoan;
     private String mkTaiKhoan;
 
     public TaiKhoanModel() {
     }
 
-    public TaiKhoanModel(String maTaiKhoan, String tenTaiKhoan, String mkTaiKhoan) {
+    public TaiKhoanModel(int maTaiKhoan, String tenTaiKhoan, String mkTaiKhoan) {
         this.maTaiKhoan = maTaiKhoan;
         this.tenTaiKhoan = tenTaiKhoan;
         this.mkTaiKhoan = mkTaiKhoan;
     }
 
-    public String getMaTaiKhoan() {
+    public int getMaTaiKhoan() {
         return maTaiKhoan;
     }
 
-    public void setMaTaiKhoan(String maTaiKhoan) {
+    public void setMaTaiKhoan(int maTaiKhoan) {
         this.maTaiKhoan = maTaiKhoan;
     }
 
