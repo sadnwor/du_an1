@@ -24,7 +24,9 @@ public class KhachHangModel {
         this.ghiChu = ghiChu;
     }
 
- 
+    public KhachHangModel(String hoTenKhachHang) {
+        this.hoTenKhachHang = hoTenKhachHang;
+    }
 
     public int getMaKhachHang() {
         return maKhachHang;
@@ -58,5 +60,10 @@ public class KhachHangModel {
     public void setGhiChu(String ghiChu) {
         this.ghiChu = ghiChu;
     }
-	
+
+    @Override
+    public String toString() {
+        return "KhachHangModel{" + "maKhachHang=" + maKhachHang + ", hoTenKhachHang=" + hoTenKhachHang + ", SDT=" + SDT + ", ghiChu=" + ghiChu + '}';
+    }
+
 }

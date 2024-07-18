@@ -3,11 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/anhha/OneDrive/Máy%20tính/du_an1/src/repository/RepositoryTaiKhoan.java</file>
-            <file>file:/C:/Users/anhha/OneDrive/Máy%20tính/du_an1/src/repository/RepositoryMonAn.java</file>
-            <file>file:/C:/Users/anhha/OneDrive/Máy%20tính/du_an1/src/view/Trang.java</file>
-            <file>file:/C:/Users/anhha/OneDrive/Máy%20tính/du_an1/src/view/Login.java</file>
-            <file>file:/C:/Users/anhha/OneDrive/Máy%20tính/du_an1/src/view/SignUp.java</file>
+            <file>file:/C:/Users/MSI/Desktop/du_an1/src/view/ViewKhachHang.java</file>
+            <file>file:/C:/Users/MSI/Desktop/du_an1/src/repository/KhachHangRepository.java</file>
+            <file>file:/C:/Users/MSI/Desktop/du_an1/src/entity/KhachHangModel.java</file>
+            <file>file:/C:/Users/MSI/Desktop/du_an1/src/view/Trang.java</file>
+            <file>file:/C:/Users/MSI/Desktop/du_an1/src/config/DBConnect.java</file>
+            <file>file:/C:/Users/MSI/Desktop/du_an1/src/view/viewUuDaii.java</file>
+            <file>file:/C:/Users/MSI/Desktop/du_an1/src/view/PanelTaiKhoan.java</file>
+            <file>file:/C:/Users/MSI/Desktop/du_an1/src/repository/DanhGiaRepository.java</file>
+            <file>file:/C:/Users/MSI/Desktop/du_an1/src/entity/DanhGiaModel.java</file>
+            <file>file:/C:/Users/MSI/Desktop/du_an1/src/repository/RepositoryTaiKhoan.java</file>
+            <file>file:/C:/Users/MSI/Desktop/du_an1/src/view/hahgah.java</file>
+            <file>file:/C:/Users/MSI/Desktop/du_an1/src/view/ViewDanhGia.java</file>
         </group>
     </open-files>
 </project-private>

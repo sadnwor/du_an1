@@ -10,7 +10,7 @@ package entity;
  */
 public class BanModel {
     private  int maBan;
-    private int maKhuVuc;
+    private KhuVucModel khuVuc;
     private String tenBan;
     private  int soLuongGheNgoi;
     private boolean trangThai;
@@ -19,9 +19,9 @@ public class BanModel {
     public BanModel() {
     }
 
-    public BanModel(int maBan, int maKhuVuc, String tenBan, int soLuongGheNgoi, boolean trangThai, String ghiChu) {
+    public BanModel(int maBan, KhuVucModel khuVuc, String tenBan, int soLuongGheNgoi, boolean trangThai, String ghiChu) {
         this.maBan = maBan;
-        this.maKhuVuc = maKhuVuc;
+        this.khuVuc = khuVuc;
         this.tenBan = tenBan;
         this.soLuongGheNgoi = soLuongGheNgoi;
         this.trangThai = trangThai;
@@ -36,12 +36,12 @@ public class BanModel {
         this.maBan = maBan;
     }
 
-    public int getMaKhuVuc() {
-        return maKhuVuc;
+    public KhuVucModel getKhuVuc() {
+        return khuVuc;
     }
 
-    public void setMaKhuVuc(int maKhuVuc) {
-        this.maKhuVuc = maKhuVuc;
+    public void setKhuVuc(KhuVucModel khuVuc) {
+        this.khuVuc = khuVuc;
     }
 
     public String getTenBan() {
@@ -76,6 +76,4 @@ public class BanModel {
         this.ghiChu = ghiChu;
     }
     
-    
-	
 }

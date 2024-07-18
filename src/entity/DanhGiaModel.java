@@ -10,7 +10,7 @@ package entity;
  */
 public class DanhGiaModel {
     private int maDanhGia;
-    private int maKhachHang;
+    private KhachHangModel khachHang;
     private String noiDungDanhGia;
     private String thoiGian;
     private boolean LikeOrDisLike;
@@ -18,9 +18,9 @@ public class DanhGiaModel {
     public DanhGiaModel() {
     }
 
-    public DanhGiaModel(int maDanhGia, int maKhachHang, String noiDungDanhGia, String thoiGian, boolean LikeOrDisLike) {
+    public DanhGiaModel(int maDanhGia, KhachHangModel khachHang, String noiDungDanhGia, String thoiGian, boolean LikeOrDisLike) {
         this.maDanhGia = maDanhGia;
-        this.maKhachHang = maKhachHang;
+        this.khachHang = khachHang;
         this.noiDungDanhGia = noiDungDanhGia;
         this.thoiGian = thoiGian;
         this.LikeOrDisLike = LikeOrDisLike;
@@ -34,12 +34,12 @@ public class DanhGiaModel {
         this.maDanhGia = maDanhGia;
     }
 
-    public int getMaKhachHang() {
-        return maKhachHang;
+    public KhachHangModel getKhachHang() {
+        return khachHang;
     }
 
-    public void setMaKhachHang(int maKhachHang) {
-        this.maKhachHang = maKhachHang;
+    public void setKhachHang(KhachHangModel khachHang) {
+        this.khachHang = khachHang;
     }
 
     public String getNoiDungDanhGia() {
@@ -65,7 +65,5 @@ public class DanhGiaModel {
     public void setLikeOrDisLike(boolean LikeOrDisLike) {
         this.LikeOrDisLike = LikeOrDisLike;
     }
-     
     
-	
 }

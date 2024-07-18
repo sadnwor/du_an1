@@ -15,7 +15,9 @@ import view.hahgah;
  */
 public class Trang extends javax.swing.JFrame {
 
-    hahgah t = new hahgah();
+    ViewKhachHang vKH = new ViewKhachHang();
+    viewUuDaii vUD = new viewUuDaii();
+    ViewDanhGia vDG = new ViewDanhGia();
 
     /**
      * Creates new form Trang
@@ -55,7 +57,7 @@ public class Trang extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Phần mềm quản lí");
-        setPreferredSize(new java.awt.Dimension(1000, 650));
+        setPreferredSize(new java.awt.Dimension(1200, 650));
 
         pnMain.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -193,7 +195,7 @@ public class Trang extends javax.swing.JFrame {
                     .addGroup(pnMenuLayout.createSequentialGroup()
                         .addGap(34, 34, 34)
                         .addComponent(txtTitle)))
-                .addGap(40, 44, Short.MAX_VALUE))
+                .addGap(40, 42, Short.MAX_VALUE))
         );
         pnMenuLayout.setVerticalGroup(
             pnMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -281,7 +283,7 @@ public class Trang extends javax.swing.JFrame {
     }//GEN-LAST:event_txtTrangChuMouseClicked
 
     private void txtTaiKhoanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtTaiKhoanMouseClicked
-        showPanel(new hahgah());
+        
     }//GEN-LAST:event_txtTaiKhoanMouseClicked
 
     private void txtBanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtBanMouseClicked
@@ -305,17 +307,16 @@ public class Trang extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNhanVienMouseClicked
 
     private void txtKhachHangMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtKhachHangMouseClicked
-
-
+        showPanel(vKH);
     }//GEN-LAST:event_txtKhachHangMouseClicked
 
     private void txtUuDaiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtUuDaiMouseClicked
-
+        showPanel(vUD);
 
     }//GEN-LAST:event_txtUuDaiMouseClicked
 
     private void txtDanhGiaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtDanhGiaMouseClicked
-
+        showPanel(vDG);
 
     }//GEN-LAST:event_txtDanhGiaMouseClicked
 
@@ -382,7 +383,6 @@ public class Trang extends javax.swing.JFrame {
     public JPanel node;
 
     private void showPanel(JFrame panel) {
-       
         pnContainer.removeAll();
         pnContainer.add(panel.getContentPane(), BorderLayout.NORTH);
         pnContainer.revalidate();
