@@ -312,8 +312,7 @@ public class Trang extends javax.swing.JFrame {
     }//GEN-LAST:event_txtKhachHangMouseClicked
 
     private void txtUuDaiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtUuDaiMouseClicked
-
-
+         showPanel(new viewUuDaii());
     }//GEN-LAST:event_txtUuDaiMouseClicked
 
     private void txtDanhGiaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtDanhGiaMouseClicked
@@ -384,7 +383,6 @@ public class Trang extends javax.swing.JFrame {
     public JPanel node;
 
     private void showPanel(JFrame panel) {
-       
         pnContainer.removeAll();
         pnContainer.add(panel.getContentPane(), BorderLayout.NORTH);
         pnContainer.revalidate();
