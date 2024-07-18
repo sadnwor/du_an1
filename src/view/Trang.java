@@ -8,15 +8,18 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import view.hahgah;
+import view.JFrameTaiKhoan;
+import view.jFrameKhachHang;
+import view.jFrameNhanVien;
 /**
  *
  * @author anhha
  */
 public class Trang extends javax.swing.JFrame {
 
-    hahgah t = new hahgah();
-
+    JFrameTaiKhoan jftk = new JFrameTaiKhoan();
+    jFrameKhachHang jfkh = new jFrameKhachHang();
+    jFrameNhanVien jfnv = new jFrameNhanVien();
     /**
      * Creates new form Trang
      */
@@ -55,7 +58,6 @@ public class Trang extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Phần mềm quản lí");
-        setPreferredSize(new java.awt.Dimension(1000, 650));
 
         pnMain.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -281,7 +283,7 @@ public class Trang extends javax.swing.JFrame {
     }//GEN-LAST:event_txtTrangChuMouseClicked
 
     private void txtTaiKhoanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtTaiKhoanMouseClicked
-        showPanel(new hahgah());
+        showPanel(new JFrameTaiKhoan());
     }//GEN-LAST:event_txtTaiKhoanMouseClicked
 
     private void txtBanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtBanMouseClicked
@@ -300,12 +302,12 @@ public class Trang extends javax.swing.JFrame {
     }//GEN-LAST:event_txtHoaDonMouseClicked
 
     private void txtNhanVienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtNhanVienMouseClicked
-
+        showPanel(new jFrameNhanVien());
 
     }//GEN-LAST:event_txtNhanVienMouseClicked
 
     private void txtKhachHangMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtKhachHangMouseClicked
-
+        showPanel(new jFrameKhachHang());
 
     }//GEN-LAST:event_txtKhachHangMouseClicked
 
