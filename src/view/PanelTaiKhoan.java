@@ -26,30 +26,167 @@ public class PanelTaiKhoan extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        pnListTaiKhoan = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tbTaiKhoan = new javax.swing.JTable();
+        pnFormTaiKhoan = new javax.swing.JPanel();
+        btSua = new javax.swing.JButton();
+        btThem = new javax.swing.JButton();
+        btXoa = new javax.swing.JButton();
+        btReset = new javax.swing.JButton();
+        jText = new javax.swing.JLabel();
+        txtTenTK = new javax.swing.JTextField();
+        JText2 = new javax.swing.JLabel();
+        txtMatKhau = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
 
-        jLabel1.setText("jLabel1");
+        pnListTaiKhoan.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Danh sách tài khoản", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+
+        tbTaiKhoan.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Mã Tài Khoản", "Tên Tài Khoản", "MK Tài Khoản"
+            }
+        ));
+        tbTaiKhoan.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tbTaiKhoanMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(tbTaiKhoan);
+
+        javax.swing.GroupLayout pnListTaiKhoanLayout = new javax.swing.GroupLayout(pnListTaiKhoan);
+        pnListTaiKhoan.setLayout(pnListTaiKhoanLayout);
+        pnListTaiKhoanLayout.setHorizontalGroup(
+            pnListTaiKhoanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 820, Short.MAX_VALUE)
+        );
+        pnListTaiKhoanLayout.setVerticalGroup(
+            pnListTaiKhoanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnListTaiKhoanLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 253, Short.MAX_VALUE))
+        );
+
+        pnFormTaiKhoan.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Thông tin Tài Khoản", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14))); // NOI18N
+        pnFormTaiKhoan.setToolTipText("");
+
+        btSua.setBackground(new java.awt.Color(255, 102, 0));
+        btSua.setForeground(new java.awt.Color(255, 255, 255));
+        btSua.setText("Sửa");
+
+        btThem.setBackground(new java.awt.Color(255, 102, 0));
+        btThem.setForeground(new java.awt.Color(255, 255, 255));
+        btThem.setText("Thêm");
+
+        btXoa.setBackground(new java.awt.Color(255, 102, 0));
+        btXoa.setForeground(new java.awt.Color(242, 242, 242));
+        btXoa.setText("Xóa");
+
+        btReset.setBackground(new java.awt.Color(255, 102, 0));
+        btReset.setForeground(new java.awt.Color(255, 255, 255));
+        btReset.setText("Reset");
+
+        jText.setText("Tên tài khoản");
+
+        JText2.setText("Mật khẩu");
+
+        javax.swing.GroupLayout pnFormTaiKhoanLayout = new javax.swing.GroupLayout(pnFormTaiKhoan);
+        pnFormTaiKhoan.setLayout(pnFormTaiKhoanLayout);
+        pnFormTaiKhoanLayout.setHorizontalGroup(
+            pnFormTaiKhoanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnFormTaiKhoanLayout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addGroup(pnFormTaiKhoanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnFormTaiKhoanLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(pnFormTaiKhoanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btReset)
+                            .addGroup(pnFormTaiKhoanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(btThem)
+                                .addComponent(btXoa)
+                                .addComponent(btSua)))
+                        .addGap(32, 32, 32))
+                    .addGroup(pnFormTaiKhoanLayout.createSequentialGroup()
+                        .addGroup(pnFormTaiKhoanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jText)
+                            .addComponent(JText2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pnFormTaiKhoanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtTenTK, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
+                            .addComponent(txtMatKhau))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+        pnFormTaiKhoanLayout.setVerticalGroup(
+            pnFormTaiKhoanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnFormTaiKhoanLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btThem)
+                .addGap(2, 2, 2)
+                .addGroup(pnFormTaiKhoanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jText)
+                    .addComponent(txtTenTK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(2, 2, 2)
+                .addComponent(btSua)
+                .addGap(4, 4, 4)
+                .addGroup(pnFormTaiKhoanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JText2)
+                    .addComponent(txtMatKhau, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btXoa)
+                .addGap(18, 18, 18)
+                .addComponent(btReset)
+                .addContainerGap(27, Short.MAX_VALUE))
+        );
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 102, 51));
+        jLabel5.setText("Quản Lí Tài Khoản");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(131, 131, 131)
-                .addComponent(jLabel1)
-                .addContainerGap(662, Short.MAX_VALUE))
+                .addGap(26, 26, 26)
+                .addComponent(jLabel5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(pnFormTaiKhoan, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnListTaiKhoan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(84, 84, 84)
-                .addComponent(jLabel1)
-                .addContainerGap(500, Short.MAX_VALUE))
+                .addGap(9, 9, 9)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pnFormTaiKhoan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(46, 46, 46)
+                .addComponent(pnListTaiKhoan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void tbTaiKhoanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbTaiKhoanMouseClicked
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tbTaiKhoanMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel JText2;
+    private javax.swing.JButton btReset;
+    private javax.swing.JButton btSua;
+    private javax.swing.JButton btThem;
+    private javax.swing.JButton btXoa;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel jText;
+    private javax.swing.JPanel pnFormTaiKhoan;
+    private javax.swing.JPanel pnListTaiKhoan;
+    private javax.swing.JTable tbTaiKhoan;
+    private javax.swing.JTextField txtMatKhau;
+    private javax.swing.JTextField txtTenTK;
     // End of variables declaration//GEN-END:variables
 }
