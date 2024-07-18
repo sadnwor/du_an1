@@ -3,18 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/admin/du_an1/src/entity/ChucVuModel.java</file>
-            <file>file:/C:/Users/admin/du_an1/src/entity/ComboModel.java</file>
-            <file>file:/C:/Users/admin/du_an1/src/view/TrangChu.java</file>
-            <file>file:/C:/Users/admin/du_an1/src/entity/TaiKhoanModel.java</file>
-            <file>file:/C:/Users/admin/du_an1/src/entity/BanModel.java</file>
-            <file>file:/C:/Users/admin/du_an1/src/view/SignUp.java</file>
-            <file>file:/C:/Users/admin/du_an1/src/entity/HoaDonModel.java</file>
-            <file>file:/C:/Users/admin/du_an1/src/view/Login.java</file>
-            <file>file:/C:/Users/admin/du_an1/src/entity/DanhGiaModel.java</file>
-            <file>file:/C:/Users/admin/du_an1/src/repository/RepositoryMonAn.java</file>
-            <file>file:/C:/Users/admin/du_an1/src/entity/MonAnModel.java</file>
-            <file>file:/C:/Users/admin/du_an1/src/entity/ComboChiTiet.java</file>
+            <file>file:/C:/Users/anhha/OneDrive/Máy%20tính/du_an1/src/repository/RepositoryTaiKhoan.java</file>
+            <file>file:/C:/Users/anhha/OneDrive/Máy%20tính/du_an1/src/repository/RepositoryMonAn.java</file>
+            <file>file:/C:/Users/anhha/OneDrive/Máy%20tính/du_an1/src/view/Trang.java</file>
+            <file>file:/C:/Users/anhha/OneDrive/Máy%20tính/du_an1/src/view/Login.java</file>
+            <file>file:/C:/Users/anhha/OneDrive/Máy%20tính/du_an1/src/view/SignUp.java</file>
         </group>
     </open-files>
 </project-private>
