@@ -55,6 +55,7 @@ public class viewUuDaii extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(830, 600));
 
         jPanel2.setBackground(new java.awt.Color(251, 216, 164));
 
